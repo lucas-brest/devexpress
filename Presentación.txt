@@ -10,7 +10,14 @@ Selected
 
 ### Formulario ###
 
+Form
+  SimpleItem
+  editorOptions
+  RequiredRule
+  ButtonItem
 
+  mode password
+  GroupItem
 
 
 ### Grafico ###
@@ -25,4 +32,9 @@ PieChart
 
 
 
-### Navigation ###
+### Editors ###
+
+CheckBox
+ColorBox
+SelectBox
+Switch

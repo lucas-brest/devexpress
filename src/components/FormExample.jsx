@@ -1,5 +1,5 @@
 import { Form } from "devextreme-react"
-import { ButtonItem, SimpleItem } from "devextreme-react/form"
+import { ButtonItem, GroupItem, RequiredRule, SimpleItem } from "devextreme-react/form"
 import { useState } from "react"
 
 const userModel = {
@@ -8,6 +8,7 @@ const userModel = {
   birthdate: '',
   city: '',
   address: '',
+  password: ''
 }
 
 const FormExample = () => {
@@ -22,11 +23,22 @@ const FormExample = () => {
     <>
       <form onSubmit={handleSubmit}>
         <Form formData={user}>
-          <SimpleItem dataField="name" />
-          <SimpleItem dataField="mail"/>
-          <SimpleItem dataField="birthdate" editorType="dxDateBox"/>
-          <SimpleItem dataField="city"/>
-          <SimpleItem dataField="address"/>
+          <GroupItem colCount={3}>
+            <SimpleItem dataField="name" />
+            <SimpleItem dataField="mail"/>
+            <SimpleItem dataField="birthdate" editorType="dxDateBox"/>
+          </GroupItem>
+          <GroupItem colCount={2}>
+            <GroupItem>
+              <SimpleItem dataField="city"/>
+              <SimpleItem dataField="address"/>
+            </GroupItem>
+            <SimpleItem dataField="password" editorOptions={{
+              mode: 'password'
+            }}>
+              <RequiredRule message="Password is required" />
+            </SimpleItem>
+          </GroupItem>
           <ButtonItem buttonOptions={{
             text: 'Submit',
             type: 'default',
