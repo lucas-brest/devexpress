@@ -1,0 +1,28 @@
+### DataGrid ###
+
+Editing
+  - Form
+  - Batch
+Sorting 
+Paging
+Filter
+Selected
+
+### Formulario ###
+
+
+
+
+### Grafico ###
+
+BarChart
+AreaChart
+  - Legend
+  - Export
+  - Palette
+PieChart
+  - Label
+
+
+
+### Navigation ###
